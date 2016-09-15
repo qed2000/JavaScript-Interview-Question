@@ -52,3 +52,60 @@ I remember a time when the only way to check the internal state of an applicatio
 Most professional development environments will require some sort of linting to correct small syntax errors and enforce a consistent style among the development team. If the code is pretty, I'll comment on that and ask about his/her experience with linting. If the code is not consistent or uses Allman rather than K & R style, I will ask the candidate about that.
 
 If the candidate struggles with any parts, I'll ask him/her to walk me through what the function should have in it and in what order. If he/she types the function on a computer, I'll ask to run the function in the console and examine the output. This is particularly helpful when the candidate has an error, because I can see how he/she goes about finding and fixing the error.
+
+##Examples
+Here are some examples and some things to notice about each:
+
+```javascript
+function FizzBuzz() {
+  for(i=0;i<99;i++){
+    if(i%3===0){
+      console.log(i + " Fizz");
+    }else if(i%5==0) {
+      console.log(i+" Buzz");
+    }else if (i%15 == 0) {
+      console.log(i+ " FizzBuzz");
+    } else {
+      console.log(i);
+    }
+  }
+}
+```
+Things to note:
+- `i` is not declared anywhere,
+- `i` is going to start at 0 and go to 98,
+- inconsistent spacing and lots of cramped areas that are more difficult to read,
+- inconsistent use of double- vs triple-equals,
+- the conditions are ordered such that if `i` is 15, the condition for `i % 3 === 0` trips instead,
+- several logging calls rather than one single call.
+
+```javascript
+function FizzBuzz() {
+  'use strict';
+  var i, out;
+  for (i = 1; i < 100; i += 1) {
+    out = i;
+    if (i % 15 === 0) {
+      out += ' FizzBuzz';
+    } else if (i % 3 === 0) {
+      out += ' Fizz';
+    } else if (i % 5 === 0) {
+      out += ' Buzz';
+    }
+    console.log(out);
+  }
+}
+```
+Things to note:
+- use of `'use strict';` - ask what happens if that isn't there
+- properly declared variables using `var` - ask about `let`, `const`, and when/where to use those instead
+- use of `+=` rather than `++` - ask about perfomance testing
+- use of triple-equals - ask the difference and when to use each
+
+```javascript
+
+```
+
+```javascript
+
+```
