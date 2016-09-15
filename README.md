@@ -34,15 +34,21 @@ For anyone who has been programming for more than a few months, this should be a
 
 ####Can the candidate write a function in JavaScript?
 If the candidate has no problem, with this, I'll generally ask him/her to provide several different ways to write a function (anonymous vs. named vs. arrow) and ask him/her what the differences between each are. *It is amazing how many people choke just writing a basic function definition.*
-####Does the candidate use 'use strict';
+####Does the candidate use `'use strict';`
 This lets me know whether the candidate has worked on many professional positions, as almost all will require using the statement to enforce consistent interpretation and error handling.
 ####Can he/she write a loop?
 Ask what are the three parts of the loop definition. If they use `let` or `const`, ask them about block scoping within the loop.
-####Do they know what a modulus is?
-####Can they properly order their conditions? Do they try to use a single compound ternary?
-####Do they use var, let or const and do they understand proper block scoping?
-Talk with them about which they used and how to properly use it.
-####Do they know what console.log is?
+####Does he/she know what a modulus is?
+The use of a modulus in a conditional is not as straight forward as many other operator uses, as it must be evaluated with a comparator. Many candidates will stop at using the operator alone.
+####Can he/she properly order the conditions?
+If the candidate uses an `if-else-if-else` construction, are they properly ordered? Checking to see if the number is divisible by 15 as the final condition will never occur in that scenario.
+####Does he/she try to use a single compound ternary?
+Many developers will try to be clever and write a single line solution. This works well as a personal challenge, but is not appropriate for a team environment as it is less readable and lacks a justifying performance gain. If the developer chains the ternaries, I will usually discuss these implications on a team to understand the candidates views on the matter.
+####Does he/she use `var`, `let` or `const` and does he/she understand proper block scoping?
+Talk with the candidate about which he/she used and how to properly use it. If he/she uses `var`, ask them about ES2015 and when to use `const` and `let`. Also make sure that any `var`'s are placed at the top of the function and ask about "hoisting" in ES5 and lower. 
+####Does he/she know what `console.log` is?
+I remember a time when the only way to check the internal state of an application was using `alert`'s. It was a dark, dark time. I was lucky enough to survive those days but many did not. Forunately, the gods gave us the console and the ability to log to it. Oddly, there are still people today who have never heard of it. I'll usually make sure the candidate knows what this is before we begin, and if he/she doesn't then I will show them how to use it.
 ####If typed, do they write in a consistent style (spacing, quotes, braces, etc.)?
+Most professional development environments will require some sort of linting to correct small syntax errors and enforce a consistent style among the development team. If the code is pretty, I'll comment on that and ask about his/her experience with linting. If the code is not consistent or uses Allman rather than K & R style, I will ask the candidate about that.
 
-If they struggle with any parts, I'll ask them to walk me through what the function should have in it and in what order. If they type the function on their computer, I'll ask them to run the function in the console and examine the output. This is particularly helpful when they have an error, because I can see how they go about finding and fixing the error.
+If the candidate struggles with any parts, I'll ask him/her to walk me through what the function should have in it and in what order. If he/she types the function on a computer, I'll ask to run the function in the console and examine the output. This is particularly helpful when the candidate has an error, because I can see how he/she goes about finding and fixing the error.
